@@ -15,6 +15,7 @@ grouparoo generate csv:source:remote profiles --parent csv_app
 # update with url of profiles.csv
 # set id column as bootstrap
 # uncomment schedule
+# bug workaround - change type to csv-remote-import (fixed in https://github.com/grouparoo/grouparoo/pull/1663)
 
 grouparoo generate csv:property email --parent profiles
 # set column as email
