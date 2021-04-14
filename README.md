@@ -1,9 +1,9 @@
-## Grouparoo App Example (Profiles from CSV)
+# Grouparoo App Example (Profiles from CSV)
 
 This project shows to how to pull in data from a remote CSV file.
 In this case, it is the primary data, but this approach can also be used to supplement data from another source (like a database).
 
-### Commands that generate this project
+## Commands that generated this project
 
 ```sh
 grouparoo init app-example-csv
@@ -28,4 +28,30 @@ grouparoo generate csv:property last_name --parent profiles
 
 grouparoo generate csv:property deactivated --parent profiles
 # set column as deactivated and type as boolean
+
+grouparoo generate group:calculated all_profiles
+# add rule to say all users with an user_id
 ```
+
+## Next steps
+
+You could create a destination to send these profiles to.
+For example, for Mailchimp:
+
+```sh
+grouparoo install @grouparoo/mailchimp
+
+grouparoo generate mailchimp:app mailchimp
+# enter api key
+
+grouparoo generate mailchimp:email:destination newsletter --parent mailchimp
+# add the list id for your newsletter
+# set the group to all_profiles group
+# map email_address, FNAME, LNAME, etc.
+```
+
+Get more details [here](https://www.grouparoo.com/docs/tutorials/app-example-config) and see the results [here](https://github.com/grouparoo/app-example-config).
+
+## Other Grouparoo Examples
+
+Visit https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
