@@ -35,7 +35,9 @@ grouparoo generate group:calculated all_profiles
 
 ## Next steps
 
-You could create a destination to send these profiles to.
+First, you will need to run `npm install`.
+
+Then, you could create a destination to send these profiles to.
 For example, for Mailchimp:
 
 ```sh
