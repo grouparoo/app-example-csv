@@ -12,8 +12,7 @@ exports.default = async function buildConfig() {
       type: "csv-remote-import",
       appId: "csv_app", // Set this value to the ID of the App this Source uses - e.g. `appId: "csv_app"`
       options: {
-        url:
-          "https://docs.google.com/spreadsheets/d/1BX0aMv2HtudZ4nBpqYy1Ve_c0yt4k0mDA91spdw2lrk/export?format=csv", // The URL of a publicly available CSV file - e.g. `url: "https://example.com/data.csv"`
+        url: "https://docs.google.com/spreadsheets/d/1BX0aMv2HtudZ4nBpqYy1Ve_c0yt4k0mDA91spdw2lrk/export?format=csv", // The URL of a publicly available CSV file - e.g. `url: "https://example.com/data.csv"`
         fileAgeHours: 1, // The number of hours to cache a download of the remote CSV file before downloading it again and checking for changes.
       },
 
@@ -33,20 +32,6 @@ exports.default = async function buildConfig() {
        */
       mapping: {
         id: "user_id",
-      },
-
-      /**
-       * If this is the first Source in Grouparoo, you must bootstrap it with an initial property.
-       * To do so, uncomment the lines below and fill in the appropriate values. Otherwise, you can
-       * create properties with the Grouparoo CLI.
-       */
-      bootstrappedProperty: {
-        id: "user_id",
-        name: "User Id",
-        type: "integer",
-        options: {
-          column: "id",
-        },
       },
     },
 
