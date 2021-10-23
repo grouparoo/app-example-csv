@@ -9,9 +9,9 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.6.3",
-    "@grouparoo/csv": "0.6.3",
-    "@grouparoo/ui-community": "0.6.3"
+    "@grouparoo/core": "0.7.0",
+    "@grouparoo/csv": "0.7.0",
+    "@grouparoo/ui-community": "0.7.0"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
