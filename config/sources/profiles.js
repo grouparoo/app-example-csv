@@ -9,8 +9,9 @@ exports.default = async function buildConfig() {
       class: "source",
       id: "profiles",
       name: "profiles",
-      type: "csv-remote-import",
+      type: "csv-import-table",
       appId: "csv_app", // Set this value to the ID of the App this Source uses - e.g. `appId: "csv_app"`
+      modelId: "profiles", // The ID of the Grouparoo Model that this Source will contribute to
       options: {
         url: "https://docs.google.com/spreadsheets/d/1BX0aMv2HtudZ4nBpqYy1Ve_c0yt4k0mDA91spdw2lrk/export?format=csv", // The URL of a publicly available CSV file - e.g. `url: "https://example.com/data.csv"`
         fileAgeHours: 1, // The number of hours to cache a download of the remote CSV file before downloading it again and checking for changes.
@@ -25,10 +26,6 @@ exports.default = async function buildConfig() {
        * `user_id` property in this Grouparoo source, your mapping would look like:
        *
        *     mapping: { id: "user_id" }
-       *
-       * If this is the first Source in Grouparoo, you'll want to create a property in the
-       * bootstrappedProperty section below. Otherwise, you can create properties with the Grouparoo
-       * CLI.
        */
       mapping: {
         id: "user_id",

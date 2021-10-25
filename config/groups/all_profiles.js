@@ -3,6 +3,7 @@ exports.default = async function buildConfig() {
     {
       class: "group",
       id: "all_profiles",
+      modelId: "profiles",
       name: "All Profiles",
       type: "calculated",
 

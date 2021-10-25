@@ -9,9 +9,10 @@ In this case, it is the primary data, but this approach can also be used to supp
 grouparoo init app-example-csv
 grouparoo install @grouparoo/csv
 
+grouparoo generate model profiles
 grouparoo generate csv:app csv_app
 
-grouparoo generate csv:source:remote profiles --parent csv_app
+grouparoo generate csv:source profiles --parent csv_app
 # update with url of profiles.csv
 # set id column as bootstrap
 # uncomment schedule
